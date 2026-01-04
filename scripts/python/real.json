@@ -1,0 +1,634 @@
+[
+    {
+        "name": "General",
+        "type": "type",
+        "independentEntry": true,
+        "campaignName": "General",
+        "connectedToYear": false,
+        "subtypes": [
+            {
+                "name": "Seforim",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "Seforim",
+                "connectedToYear": false
+            },
+            {
+                "name": "Torah Fund",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "Torah Fund",
+                "connectedToYear": false
+            },
+            {
+                "name": "Yahrtzeit/Yizkor",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "Yizkor",
+                "connectedToYear": false
+            },
+            {
+                "name": "Building Fund",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "General Building",
+                "connectedToYear": false
+            },
+            {
+                "name": "Electric Bill",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "General Electric",
+                "connectedToYear": false
+            },
+            {
+                "name": "Furniture",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "General Furniture",
+                "connectedToYear": false
+            },
+            {
+                "name": "Unknown",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "General Unknown",
+                "connectedToYear": false
+            },
+            {
+                "name": "Building Upkeep",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "General Upkeep",
+                "connectedToYear": false
+            },
+            {
+                "name": "Children Books",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "Childrens Book",
+                "connectedToYear": false
+            },
+            {
+                "name": "Mashapia",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "Mashpia",
+                "connectedToYear": false
+            },
+            {
+                "name": "Birthday Club",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "Birthday Club",
+                "connectedToYear": false
+            }
+        ]
+    },
+    {
+        "name": "Kibudim",
+        "type": "type",
+        "independentEntry": false,
+        "subtypes": [
+            {
+                "name": "Shabbos",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Shabbos Kibud",
+                "connectedToYear": true,
+                "details": [
+                    {
+                        "name": "Aliyah",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Aliyah",
+                        "connectedToYear": true
+                    }
+                ]
+            },
+            {
+                "name": "Rosh Hashana",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - RH Kibud",
+                "connectedToYear": true
+            },
+            {
+                "name": "Yom Kipur",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Yom Kipur Kibud",
+                "connectedToYear": true,
+                "details": [
+                    {
+                        "name": "Maftir Yona",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Maftir Yona",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Kol Nidrei",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Kol Nidrei",
+                        "connectedToYear": true
+                    }
+                ]
+            },
+            {
+                "name": "Sukkos",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Sukkos Kibud",
+                "connectedToYear": true,
+                "details": [
+                    {
+                        "name": "Aliyah",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Sukkos Aliyah",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Psicha",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Sukkos Psicha",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Hagbah",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Sukkos Hagbah",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Gelilah",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Sukkos Gelilah",
+                        "connectedToYear": true
+                    }
+                ]
+            },
+            {
+                "name": "Simchas Torah",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Simchas Torah Kibud",
+                "connectedToYear": true,
+                "details": [
+                    {
+                        "name": "Geshem",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Geshem",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Ata Horisa",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Ata Horaisa",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Aliyah",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Simchas Torah Aliyah",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Psicha",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Simchas Torah Psicha",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Hagbah",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Simchas Torah Hagbah",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Gelilah",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Simchas Torah Gelilah",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Choson Torah",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Choson Torah",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Choson Breishis",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Choson Bereishis",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Kol Hane'orim",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Kol Hane'orim",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Vehoyo Zar'acho",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Vehoyo Zar'acho",
+                        "connectedToYear": true
+                    }
+                ]
+            },
+            {
+                "name": "Pesach",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Pesach Kibud",
+                "connectedToYear": true,
+                "details": [
+                    {
+                        "name": "Tal",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Tal",
+                        "connectedToYear": true
+                    }
+                ]
+            },
+            {
+                "name": "Shavuos",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Shavuos Kibud",
+                "connectedToYear": true
+            },
+            {
+                "name": "Hagbah Yearly",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Hagbah Yearly",
+                "connectedToYear": true,
+                "details": [
+                    {
+                        "name": "Bereshis",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Hagbah Bereshis",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Shemos",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Hagbah Shemos",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Vayikra",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Hagbah Vayikra",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Bamidbor",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Hagbah Bamidbar",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Devorim",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Hagbah Devorim",
+                        "connectedToYear": true
+                    }
+                ]
+            },
+            {
+                "name": "Psicha Yearly",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Psicha Yearly",
+                "connectedToYear": true,
+                "details": [
+                    {
+                        "name": "Bereshis",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Psicha Bereshis",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Shemos",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Psicha Shemos",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Vayikra",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Psicha Vayikra",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Bamidbar",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Psicha Bamidbar",
+                        "connectedToYear": true
+                    },
+                    {
+                        "name": "Devarim",
+                        "type": "detail",
+                        "independentEntry": true,
+                        "campaignName": "{year} - Psicha Devorim",
+                        "connectedToYear": true
+                    }
+                ]
+            },
+            {
+                "name": "Chazak",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Chazak",
+                "connectedToYear": true
+            },
+            {
+                "name": "Chanuka",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Chanuka Kibud",
+                "connectedToYear": true
+            }
+        ]
+    },
+    {
+        "name": "Membership",
+        "type": "type",
+        "independentEntry": true,
+        "campaignName": "{year} - Membership",
+        "connectedToYear": true
+    },
+    {
+        "name": "Services",
+        "type": "type",
+        "independentEntry": false,
+        "subtypes": [
+            {
+                "name": "Hoshanos",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Hoshanos",
+                "connectedToYear": true
+            }
+        ]
+    },
+    {
+        "name": "Grants",
+        "type": "type",
+        "independentEntry": false,
+        "subtypes": [
+            {
+                "name": "Maos Chitim",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Maos Chittim",
+                "connectedToYear": true
+            },
+            {
+                "name": "Tishrei Yom Tov Fund",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Tishrei Fund",
+                "connectedToYear": true
+            },
+            {
+                "name": "General",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - General Grant",
+                "connectedToYear": true
+            }
+        ]
+    },
+    {
+        "name": "Events",
+        "type": "type",
+        "independentEntry": false,
+        "subtypes": [
+            {
+                "name": "Tishrei",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Tishrei",
+                "connectedToYear": true
+            },
+            {
+                "name": "Chanukah",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Chanukah",
+                "connectedToYear": true
+            },
+            {
+                "name": "19 Kislev",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - 19 Kislev",
+                "connectedToYear": true
+            },
+            {
+                "name": "Farbrengen Genaral",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Farbrengen Genaral",
+                "connectedToYear": true
+            },
+            {
+                "name": "Purim",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Purim",
+                "connectedToYear": true
+            },
+            {
+                "name": "Mesibas Shabbos",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Mesibas Shabbos",
+                "connectedToYear": true
+            },
+            {
+                "name": "Kiddush",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Kiddush",
+                "connectedToYear": true
+            },
+            {
+                "name": "Shiurim",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Shiurim",
+                "connectedToYear": true
+            },
+            {
+                "name": "11 Nison",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - 11 Nison",
+                "connectedToYear": true
+            },
+            {
+                "name": "Avos Ubonim",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Avos Ubonim",
+                "connectedToYear": true
+            },
+            {
+                "name": "Kids Rally",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Kids Rally",
+                "connectedToYear": true
+            },
+            {
+                "name": "Shabbos Kids Program",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Shabbos Kids Program",
+                "connectedToYear": true
+            },
+            {
+                "name": "Siyum Harambam",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Siyum Harambam",
+                "connectedToYear": true
+            },
+            {
+                "name": "Tanya",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "Tanya",
+                "connectedToYear": false
+            },
+            {
+                "name": "Nshei",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Nshei",
+                "connectedToYear": true
+            },
+            {
+                "name": "3 Tamuz",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - 3 Tamuz",
+                "connectedToYear": true
+            },
+            {
+                "name": "20 Av",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - 20 Av",
+                "connectedToYear": true
+            },
+            {
+                "name": "Break Fast",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Break Fast",
+                "connectedToYear": true
+            },
+            {
+                "name": "Rosh Chodesh Kislev",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "{year} - Rosh Chodesh Kislev",
+                "connectedToYear": true
+            }
+        ]
+    },
+    {
+        "name": "Advertising",
+        "type": "type",
+        "independentEntry": false,
+        "subtypes": [
+            {
+                "name": "Advertising",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "Advertising",
+                "connectedToYear": false
+            }
+        ]
+    },
+    {
+        "name": "Shul Renovation",
+        "type": "type",
+        "independentEntry": false,
+        "subtypes": [
+            {
+                "name": "New Flooring",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "New Flooring",
+                "connectedToYear": false
+            },
+            {
+                "name": "Men's Mikvah",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "Men's Mikvah",
+                "connectedToYear": false
+            },
+            {
+                "name": "Mikvah Fund",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "Mikvah Fund",
+                "connectedToYear": false
+            }
+        ]
+    },
+    {
+        "name": "Hall Rental",
+        "type": "type",
+        "independentEntry": false,
+        "subtypes": [
+            {
+                "name": "Big Hall",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "Big Hall Rentel",
+                "connectedToYear": false
+            },
+            {
+                "name": "Cheder Sheni",
+                "type": "subtype",
+                "independentEntry": true,
+                "campaignName": "Cheder Sheni Rentel",
+                "connectedToYear": false
+            }
+        ]
+    }
+]

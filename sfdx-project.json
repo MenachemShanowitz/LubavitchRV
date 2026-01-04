@@ -1,0 +1,18 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    },
+    {
+      "path": "scripts/python/deploy_package"
+    },
+    {
+      "path": "scripts/python/deploy_pkg"
+    }
+  ],
+  "name": "LubavitchRV",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "65.0"
+}

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Detail__c</fullName>
+    <label>Detail</label>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>SubType__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aliyah</fullName>
+                <default>false</default>
+                <label>Aliyah</label>
+            </value>
+            <value>
+                <fullName>Ata Horisa</fullName>
+                <default>false</default>
+                <label>Ata Horisa</label>
+            </value>
+            <value>
+                <fullName>Bamidbar</fullName>
+                <default>false</default>
+                <label>Bamidbar</label>
+            </value>
+            <value>
+                <fullName>Bamidbor</fullName>
+                <default>false</default>
+                <label>Bamidbor</label>
+            </value>
+            <value>
+                <fullName>Bereshis</fullName>
+                <default>false</default>
+                <label>Bereshis</label>
+            </value>
+            <value>
+                <fullName>Choson Breishis</fullName>
+                <default>false</default>
+                <label>Choson Breishis</label>
+            </value>
+            <value>
+                <fullName>Choson Torah</fullName>
+                <default>false</default>
+                <label>Choson Torah</label>
+            </value>
+            <value>
+                <fullName>Devarim</fullName>
+                <default>false</default>
+                <label>Devarim</label>
+            </value>
+            <value>
+                <fullName>Devorim</fullName>
+                <default>false</default>
+                <label>Devorim</label>
+            </value>
+            <value>
+                <fullName>Gelilah</fullName>
+                <default>false</default>
+                <label>Gelilah</label>
+            </value>
+            <value>
+                <fullName>Geshem</fullName>
+                <default>false</default>
+                <label>Geshem</label>
+            </value>
+            <value>
+                <fullName>Hagbah</fullName>
+                <default>false</default>
+                <label>Hagbah</label>
+            </value>
+            <value>
+                <fullName>Kol Hane'orim</fullName>
+                <default>false</default>
+                <label>Kol Hane'orim</label>
+            </value>
+            <value>
+                <fullName>Kol Nidrei</fullName>
+                <default>false</default>
+                <label>Kol Nidrei</label>
+            </value>
+            <value>
+                <fullName>Maftir Yona</fullName>
+                <default>false</default>
+                <label>Maftir Yona</label>
+            </value>
+            <value>
+                <fullName>Psicha</fullName>
+                <default>false</default>
+                <label>Psicha</label>
+            </value>
+            <value>
+                <fullName>Shemos</fullName>
+                <default>false</default>
+                <label>Shemos</label>
+            </value>
+            <value>
+                <fullName>Tal</fullName>
+                <default>false</default>
+                <label>Tal</label>
+            </value>
+            <value>
+                <fullName>Vayikra</fullName>
+                <default>false</default>
+                <label>Vayikra</label>
+            </value>
+            <value>
+                <fullName>Vehoyo Zar'acho</fullName>
+                <default>false</default>
+                <label>Vehoyo Zar'acho</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <valueName>Aliyah</valueName>
+            <controllingFieldValue>Shabbos</controllingFieldValue>
+            <controllingFieldValue>Simchas Torah</controllingFieldValue>
+            <controllingFieldValue>Sukkos</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Ata Horisa</valueName>
+            <controllingFieldValue>Simchas Torah</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Bamidbar</valueName>
+            <controllingFieldValue>Psicha Yearly</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Bamidbor</valueName>
+            <controllingFieldValue>Hagbah Yearly</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Bereshis</valueName>
+            <controllingFieldValue>Hagbah Yearly</controllingFieldValue>
+            <controllingFieldValue>Psicha Yearly</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Choson Breishis</valueName>
+            <controllingFieldValue>Simchas Torah</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Choson Torah</valueName>
+            <controllingFieldValue>Simchas Torah</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Devarim</valueName>
+            <controllingFieldValue>Psicha Yearly</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Devorim</valueName>
+            <controllingFieldValue>Hagbah Yearly</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Gelilah</valueName>
+            <controllingFieldValue>Simchas Torah</controllingFieldValue>
+            <controllingFieldValue>Sukkos</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Geshem</valueName>
+            <controllingFieldValue>Simchas Torah</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Hagbah</valueName>
+            <controllingFieldValue>Simchas Torah</controllingFieldValue>
+            <controllingFieldValue>Sukkos</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Kol Hane'orim</valueName>
+            <controllingFieldValue>Simchas Torah</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Kol Nidrei</valueName>
+            <controllingFieldValue>Yom Kipur</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Maftir Yona</valueName>
+            <controllingFieldValue>Yom Kipur</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Psicha</valueName>
+            <controllingFieldValue>Simchas Torah</controllingFieldValue>
+            <controllingFieldValue>Sukkos</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Shemos</valueName>
+            <controllingFieldValue>Hagbah Yearly</controllingFieldValue>
+            <controllingFieldValue>Psicha Yearly</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Tal</valueName>
+            <controllingFieldValue>Pesach</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Vayikra</valueName>
+            <controllingFieldValue>Hagbah Yearly</controllingFieldValue>
+            <controllingFieldValue>Psicha Yearly</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Vehoyo Zar'acho</valueName>
+            <controllingFieldValue>Simchas Torah</controllingFieldValue>
+        </valueSettings>
+    </valueSet>
+</CustomField>

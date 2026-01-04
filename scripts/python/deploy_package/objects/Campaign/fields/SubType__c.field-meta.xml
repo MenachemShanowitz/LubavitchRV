@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SubType__c</fullName>
+    <label>SubType</label>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>11 Nison</fullName>
+                <default>false</default>
+                <label>11 Nison</label>
+            </value>
+            <value>
+                <fullName>19 Kislev</fullName>
+                <default>false</default>
+                <label>19 Kislev</label>
+            </value>
+            <value>
+                <fullName>20 Av</fullName>
+                <default>false</default>
+                <label>20 Av</label>
+            </value>
+            <value>
+                <fullName>3 Tamuz</fullName>
+                <default>false</default>
+                <label>3 Tamuz</label>
+            </value>
+            <value>
+                <fullName>Advertising</fullName>
+                <default>false</default>
+                <label>Advertising</label>
+            </value>
+            <value>
+                <fullName>Avos Ubonim</fullName>
+                <default>false</default>
+                <label>Avos Ubonim</label>
+            </value>
+            <value>
+                <fullName>Big Hall</fullName>
+                <default>false</default>
+                <label>Big Hall</label>
+            </value>
+            <value>
+                <fullName>Birthday Club</fullName>
+                <default>false</default>
+                <label>Birthday Club</label>
+            </value>
+            <value>
+                <fullName>Break Fast</fullName>
+                <default>false</default>
+                <label>Break Fast</label>
+            </value>
+            <value>
+                <fullName>Building Fund</fullName>
+                <default>false</default>
+                <label>Building Fund</label>
+            </value>
+            <value>
+                <fullName>Building Upkeep</fullName>
+                <default>false</default>
+                <label>Building Upkeep</label>
+            </value>
+            <value>
+                <fullName>Chanuka</fullName>
+                <default>false</default>
+                <label>Chanuka</label>
+            </value>
+            <value>
+                <fullName>Chanukah</fullName>
+                <default>false</default>
+                <label>Chanukah</label>
+            </value>
+            <value>
+                <fullName>Chazak</fullName>
+                <default>false</default>
+                <label>Chazak</label>
+            </value>
+            <value>
+                <fullName>Cheder Sheni</fullName>
+                <default>false</default>
+                <label>Cheder Sheni</label>
+            </value>
+            <value>
+                <fullName>Children Books</fullName>
+                <default>false</default>
+                <label>Children Books</label>
+            </value>
+            <value>
+                <fullName>Electric Bill</fullName>
+                <default>false</default>
+                <label>Electric Bill</label>
+            </value>
+            <value>
+                <fullName>Farbrengen Genaral</fullName>
+                <default>false</default>
+                <label>Farbrengen Genaral</label>
+            </value>
+            <value>
+                <fullName>Furniture</fullName>
+                <default>false</default>
+                <label>Furniture</label>
+            </value>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>Hagbah Yearly</fullName>
+                <default>false</default>
+                <label>Hagbah Yearly</label>
+            </value>
+            <value>
+                <fullName>Hoshanos</fullName>
+                <default>false</default>
+                <label>Hoshanos</label>
+            </value>
+            <value>
+                <fullName>Kiddush</fullName>
+                <default>false</default>
+                <label>Kiddush</label>
+            </value>
+            <value>
+                <fullName>Kids Rally</fullName>
+                <default>false</default>
+                <label>Kids Rally</label>
+            </value>
+            <value>
+                <fullName>Maos Chitim</fullName>
+                <default>false</default>
+                <label>Maos Chitim</label>
+            </value>
+            <value>
+                <fullName>Mashapia</fullName>
+                <default>false</default>
+                <label>Mashapia</label>
+            </value>
+            <value>
+                <fullName>Men Mikvah</fullName>
+                <default>false</default>
+                <label>Men Mikvah</label>
+            </value>
+            <value>
+                <fullName>Men's Mikvah</fullName>
+                <default>false</default>
+                <label>Men's Mikvah</label>
+            </value>
+            <value>
+                <fullName>Mesibas Shabbos</fullName>
+                <default>false</default>
+                <label>Mesibas Shabbos</label>
+            </value>
+            <value>
+                <fullName>Mikvah Fund</fullName>
+                <default>false</default>
+                <label>Mikvah Fund</label>
+            </value>
+            <value>
+                <fullName>New Flooring</fullName>
+                <default>false</default>
+                <label>New Flooring</label>
+            </value>
+            <value>
+                <fullName>Nshei</fullName>
+                <default>false</default>
+                <label>Nshei</label>
+            </value>
+            <value>
+                <fullName>Pesach</fullName>
+                <default>false</default>
+                <label>Pesach</label>
+            </value>
+            <value>
+                <fullName>Psicha Yearly</fullName>
+                <default>false</default>
+                <label>Psicha Yearly</label>
+            </value>
+            <value>
+                <fullName>Purim</fullName>
+                <default>false</default>
+                <label>Purim</label>
+            </value>
+            <value>
+                <fullName>Rosh Chodesh Kislev</fullName>
+                <default>false</default>
+                <label>Rosh Chodesh Kislev</label>
+            </value>
+            <value>
+                <fullName>Rosh Hashana</fullName>
+                <default>false</default>
+                <label>Rosh Hashana</label>
+            </value>
+            <value>
+                <fullName>Seforim</fullName>
+                <default>false</default>
+                <label>Seforim</label>
+            </value>
+            <value>
+                <fullName>Shabbos</fullName>
+                <default>false</default>
+                <label>Shabbos</label>
+            </value>
+            <value>
+                <fullName>Shabbos Kids Program</fullName>
+                <default>false</default>
+                <label>Shabbos Kids Program</label>
+            </value>
+            <value>
+                <fullName>Shavuos</fullName>
+                <default>false</default>
+                <label>Shavuos</label>
+            </value>
+            <value>
+                <fullName>Shiurim</fullName>
+                <default>false</default>
+                <label>Shiurim</label>
+            </value>
+            <value>
+                <fullName>Simchas Torah</fullName>
+                <default>false</default>
+                <label>Simchas Torah</label>
+            </value>
+            <value>
+                <fullName>Siyum Harambam</fullName>
+                <default>false</default>
+                <label>Siyum Harambam</label>
+            </value>
+            <value>
+                <fullName>Sukkos</fullName>
+                <default>false</default>
+                <label>Sukkos</label>
+            </value>
+            <value>
+                <fullName>Tanya</fullName>
+                <default>false</default>
+                <label>Tanya</label>
+            </value>
+            <value>
+                <fullName>Tishrei</fullName>
+                <default>false</default>
+                <label>Tishrei</label>
+            </value>
+            <value>
+                <fullName>Tishrei Yom Tov Fund</fullName>
+                <default>false</default>
+                <label>Tishrei Yom Tov Fund</label>
+            </value>
+            <value>
+                <fullName>Torah Fund</fullName>
+                <default>false</default>
+                <label>Torah Fund</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>Yahrtzeit/Yizkor</fullName>
+                <default>false</default>
+                <label>Yahrtzeit/Yizkor</label>
+            </value>
+            <value>
+                <fullName>Yom Kipur</fullName>
+                <default>false</default>
+                <label>Yom Kipur</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <valueName>11 Nison</valueName>
+            <controllingFieldValue>Events</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>19 Kislev</valueName>
+            <controllingFieldValue>Events</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>20 Av</valueName>
+            <controllingFieldValue>Events</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>3 Tamuz</valueName>
+            <controllingFieldValue>Events</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Advertising</valueName>
+            <controllingFieldValue>Advertising</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Avos Ubonim</valueName>
+            <controllingFieldValue>Events</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Big Hall</valueName>
+            <controllingFieldValue>Hall Rental</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Birthday Club</valueName>
+            <controllingFieldValue>General</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Break Fast</valueName>
+            <controllingFieldValue>Events</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Building Fund</valueName>
+            <controllingFieldValue>General</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Building Upkeep</valueName>
+            <controllingFieldValue>General</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Chanuka</valueName>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Chanukah</valueName>
+            <controllingFieldValue>Events</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Chazak</valueName>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Cheder Sheni</valueName>
+            <controllingFieldValue>Hall Rental</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Children Books</valueName>
+            <controllingFieldValue>General</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Electric Bill</valueName>
+            <controllingFieldValue>General</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Farbrengen Genaral</valueName>
+            <controllingFieldValue>Events</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Furniture</valueName>
+            <controllingFieldValue>General</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>General</valueName>
+            <controllingFieldValue>Grants</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Hagbah Yearly</valueName>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Hoshanos</valueName>
+            <controllingFieldValue>Services</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Kiddush</valueName>
+            <controllingFieldValue>Events</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Kids Rally</valueName>
+            <controllingFieldValue>Events</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Maos Chitim</valueName>
+            <controllingFieldValue>Grants</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Mashapia</valueName>
+            <controllingFieldValue>General</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Men Mikvah</valueName>
+            <controllingFieldValue>General</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Men's Mikvah</valueName>
+            <controllingFieldValue>Shul Renovation</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Mesibas Shabbos</valueName>
+            <controllingFieldValue>Events</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Mikvah Fund</valueName>
+            <controllingFieldValue>General</controllingFieldValue>
+            <controllingFieldValue>Shul Renovation</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>New Flooring</valueName>
+            <controllingFieldValue>Shul Renovation</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Nshei</valueName>
+            <controllingFieldValue>Events</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Pesach</valueName>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Psicha Yearly</valueName>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Purim</valueName>
+            <controllingFieldValue>Events</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Rosh Chodesh Kislev</valueName>
+            <controllingFieldValue>Events</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Rosh Hashana</valueName>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Seforim</valueName>
+            <controllingFieldValue>General</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Shabbos</valueName>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Shabbos Kids Program</valueName>
+            <controllingFieldValue>Events</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Shavuos</valueName>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Shiurim</valueName>
+            <controllingFieldValue>Events</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Simchas Torah</valueName>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Siyum Harambam</valueName>
+            <controllingFieldValue>Events</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Sukkos</valueName>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Tanya</valueName>
+            <controllingFieldValue>Events</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Tishrei</valueName>
+            <controllingFieldValue>Events</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Tishrei Yom Tov Fund</valueName>
+            <controllingFieldValue>Grants</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Torah Fund</valueName>
+            <controllingFieldValue>General</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Unknown</valueName>
+            <controllingFieldValue>General</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Yahrtzeit/Yizkor</valueName>
+            <controllingFieldValue>General</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
+            <valueName>Yom Kipur</valueName>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+        </valueSettings>
+    </valueSet>
+</CustomField>
