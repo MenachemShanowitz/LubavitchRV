@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Charge</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>OneCRM__Income_Compact_Layout</compactLayoutAssignment>
+    <description>Used for pledges, etc</description>
+    <label>Charge</label>
+    <picklistValues>
+        <picklist>OneCRM__Payment_Type__c</picklist>
+        <values>
+            <fullName>External Service</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OneCRM__Processing_Status__c</picklist>
+        <values>
+            <fullName>Auto Payment Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto Processing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Auto Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Paid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting Manual Process</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OneCRM__Recognition_Type__c</picklist>
+        <values>
+            <fullName>Dedicated To</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solicited By</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OneCRM__Status__c</picklist>
+        <values>
+            <fullName>Success</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

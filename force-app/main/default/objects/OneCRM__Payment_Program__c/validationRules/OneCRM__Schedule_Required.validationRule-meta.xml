@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Schedule_Required</fullName>
+    <active>true</active>
+    <description>You must select a Schedule.</description>
+    <errorConditionFormula>ISPICKVAL( OneCRM__Schedule__c , &quot;&quot;)</errorConditionFormula>
+    <errorDisplayField>OneCRM__Schedule__c</errorDisplayField>
+    <errorMessage>You must select a value for Schedule.</errorMessage>
+</ValidationRule>

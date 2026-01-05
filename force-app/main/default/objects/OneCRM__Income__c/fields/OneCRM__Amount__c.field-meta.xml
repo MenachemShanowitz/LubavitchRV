@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Amount__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Income Total</label>
+    <summarizedField>OneCRM__Income_Line_Item__c.OneCRM__Amount__c</summarizedField>
+    <summaryForeignKey>OneCRM__Income_Line_Item__c.OneCRM__Income__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

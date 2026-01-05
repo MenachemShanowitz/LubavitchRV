@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__gave_more_this_year_then_last_year__c</fullName>
+    <deprecated>false</deprecated>
+    <formula>OneCRM__YTD_Income_Summary__c &gt; OneCRM__Last_Year_Income_Summary__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Gave More This Year Then Last Year</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

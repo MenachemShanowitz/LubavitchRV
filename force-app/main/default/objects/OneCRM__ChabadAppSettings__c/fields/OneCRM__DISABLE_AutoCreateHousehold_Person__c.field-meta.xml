@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__DISABLE_AutoCreateHousehold_Person__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <inlineHelpText>If checked, when the Primary Household field is empty on a PersonAccount, the system will NOT create a household and place the Person into it. This WILL result in people not being associated with households.</inlineHelpText>
+    <label>DISABLE_AutoCreateHousehold_Person</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

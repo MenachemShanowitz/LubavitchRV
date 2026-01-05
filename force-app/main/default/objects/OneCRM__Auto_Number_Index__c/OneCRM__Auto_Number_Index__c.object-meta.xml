@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Contains the current index of auto-number fields (initially for payments and charges only)</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Auto Number Index</label>
+    <visibility>Public</visibility>
+</CustomObject>

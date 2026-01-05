@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Cannot_change_Credit_Card_Number</fullName>
+    <active>false</active>
+    <errorConditionFormula>!ISNEW() &amp;&amp; NOT( ISBLANK(PRIORVALUE( OneCRM__CardNumber__c ))) &amp;&amp; ISCHANGED(OneCRM__CardNumber__c)</errorConditionFormula>
+    <errorDisplayField>OneCRM__CardNumber__c</errorDisplayField>
+    <errorMessage>Cannot change the card number for an existing credit card.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Credit_Cards_required_for_cc</fullName>
+    <active>true</active>
+    <description>If the Payment Type is Credit Card, provide a Credit Card record.
+            (Can apply to payments and charges)</description>
+    <errorConditionFormula>(ISBLANK( OneCRM__Credit_Card__c ) &amp;&amp; ISPICKVAL( OneCRM__Payment_Type__c , &quot;Credit Card&quot;))
+            ||
+            (!ISBLANK( OneCRM__Credit_Card__c ) &amp;&amp; !ISPICKVAL( OneCRM__Payment_Type__c , &quot;Credit Card&quot;))</errorConditionFormula>
+    <errorDisplayField>OneCRM__Credit_Card__c</errorDisplayField>
+    <errorMessage>Credit card payments require a Credit Card to be referenced. Non-credit card payments should not reference a Credit Card.</errorMessage>
+</ValidationRule>

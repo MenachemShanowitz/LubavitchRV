@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Schedule__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Determines how often payments will occur while this Payment Program is active. Time periods are relative to the Start Date.</description>
+    <inlineHelpText>Determines how often payments will occur while this Payment Program is active. Time periods are relative to the Start Date.</inlineHelpText>
+    <label>Schedule</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+                <label>Weekly</label>
+            </value>
+            <value>
+                <fullName>Monthly</fullName>
+                <default>true</default>
+                <label>Monthly</label>
+            </value>
+            <value>
+                <fullName>Yearly</fullName>
+                <default>false</default>
+                <label>Yearly</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

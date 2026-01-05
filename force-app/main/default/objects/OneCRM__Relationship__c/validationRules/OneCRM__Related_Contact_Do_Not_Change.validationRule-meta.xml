@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Related_Contact_Do_Not_Change</fullName>
+    <active>false</active>
+    <description>Do not allow user to change Related Contact value as it damages the paired relationship data</description>
+    <errorConditionFormula>and(not( ISNEW()), ISCHANGED(  OneCRM__RelatedAccount__c  ))</errorConditionFormula>
+    <errorDisplayField>OneCRM__RelatedAccount__c</errorDisplayField>
+    <errorMessage>Rather than change the person in an existing relationship, delete this relationship and create a new one.</errorMessage>
+</ValidationRule>

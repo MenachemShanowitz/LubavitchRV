@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Amount_Per_Charge__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The amount to be paid in each Charge.</description>
+    <inlineHelpText>The amount to be paid in each Charge.</inlineHelpText>
+    <label>Amount Per Charge</label>
+    <precision>18</precision>
+    <required>true</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

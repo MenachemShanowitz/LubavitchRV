@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Recent_Form_Submissions</fullName>
+    <columns>NAME</columns>
+    <columns>OneCRM__Date__c</columns>
+    <columns>OneCRM__Campaign__c</columns>
+    <columns>OneCRM__Contact__c</columns>
+    <columns>OneCRM__hyperlink__c</columns>
+    <columns>OneCRM__Status__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>OneCRM__Date__c</field>
+        <operation>equals</operation>
+        <value>LAST_N_DAYS:3</value>
+    </filters>
+    <label>Recent Submissions</label>
+</ListView>

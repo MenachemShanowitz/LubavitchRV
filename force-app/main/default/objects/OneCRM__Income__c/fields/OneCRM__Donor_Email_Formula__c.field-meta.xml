@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Donor_Email_Formula__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF (OneCRM__Donor__r.RecordType.Name == &apos;Family&apos;,
+            IF(OneCRM__Related_Contact__c != &apos;&apos; &amp;&amp; OneCRM__Related_Contact__r.HasOptedOutOfEmail == false, OneCRM__Related_Contact__r.Email,
+            IF(OneCRM__Donor__r.OneCRM__Primary_Contact__c  != &apos;&apos; &amp;&amp; OneCRM__Donor__r.OneCRM__Primary_Contact__r.Email!= &apos;&apos; &amp;&amp; OneCRM__Donor__r.OneCRM__Primary_Contact__r.HasOptedOutOfEmail == false, OneCRM__Donor__r.OneCRM__Primary_Contact__r.Email,
+            IF(OneCRM__Donor__r.OneCRM__Secondary_Contact__c  != &apos;&apos; &amp;&amp; OneCRM__Donor__r.OneCRM__Secondary_Contact__r.Email!= &apos;&apos;, OneCRM__Donor__r.OneCRM__Secondary_Contact__r.Email,&apos;&apos;))), OneCRM__Donor__r.OneCRM__Email__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Donor Email</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

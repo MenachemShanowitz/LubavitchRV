@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__DISABLE_Relationships_trigger__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>DISABLES the Relationships.trigger (Relationship__c, before insert, before update, before delete, after insert, after update, after delete, after undelete)
+- checking this box will disable a trigger.  This can cause erratic and unpredictable behavior in your org.  FOR ADVANCED CONSULTANT AND DEVELOPERS ONLY.</description>
+    <inlineHelpText>DISABLES the Relationships.trigger (Relationship__c, before insert, before update, before delete, after insert, after update, after delete, after undelete)
+- checking this box will disable a trigger. This can cause erratic and unpredictable behavior in y</inlineHelpText>
+    <label>DISABLE_Relationships_trigger</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

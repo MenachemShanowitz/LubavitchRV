@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Payment</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>OneCRM__Payment_Compact_Layout</compactLayoutAssignment>
+    <description>used for payments (actual transfer of funds)</description>
+    <label>Payment</label>
+    <picklistValues>
+        <picklist>OneCRM__Payment_Type__c</picklist>
+        <values>
+            <fullName>Cash</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Check</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Service</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OneCRM__Processing_Status__c</picklist>
+        <values>
+            <fullName>Auto Payment Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto Processing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Auto Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Paid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting Manual Process</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OneCRM__Recognition_Type__c</picklist>
+        <values>
+            <fullName>Dedicated To</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solicited By</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OneCRM__Status__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Redirect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

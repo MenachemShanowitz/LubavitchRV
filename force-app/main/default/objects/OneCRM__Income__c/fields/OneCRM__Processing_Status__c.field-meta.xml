@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Processing_Status__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Determines what is happening with this Charge. Used primarily to track automatic processing.</description>
+    <inlineHelpText>Determines what is happening with this Charge.</inlineHelpText>
+    <label>Processing Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>true</default>
+                <label>Inactive</label>
+            </value>
+            <value>
+                <fullName>Awaiting Auto Process</fullName>
+                <default>false</default>
+                <label>Awaiting Auto Process</label>
+            </value>
+            <value>
+                <fullName>Waiting Manual Process</fullName>
+                <default>false</default>
+                <label>Waiting Manual Process</label>
+            </value>
+            <value>
+                <fullName>Auto Processing</fullName>
+                <default>false</default>
+                <label>Auto Processing</label>
+            </value>
+            <value>
+                <fullName>Auto Payment Error</fullName>
+                <default>false</default>
+                <label>Auto Payment Error</label>
+            </value>
+            <value>
+                <fullName>Paid</fullName>
+                <default>false</default>
+                <label>Paid</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Include_Address_Fields__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Include address fields when sending payment to processor.</description>
+    <inlineHelpText>Card may be declined if the address is not an exact match.</inlineHelpText>
+    <label>Include Address Fields</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

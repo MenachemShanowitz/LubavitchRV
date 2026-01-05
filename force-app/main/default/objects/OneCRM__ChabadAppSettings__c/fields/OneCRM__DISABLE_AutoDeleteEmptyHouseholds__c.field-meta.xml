@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__DISABLE_AutoDeleteEmptyHouseholds__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <inlineHelpText>When checked, the system will not auto-delete empty households daily.</inlineHelpText>
+    <label>DISABLE_AutoDeleteEmptyHouseholds</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

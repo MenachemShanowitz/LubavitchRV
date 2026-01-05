@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>SubType__c</fullName>
     <label>SubType</label>
+    <required>false</required>
     <type>Picklist</type>
     <valueSet>
         <controllingField>Type</controllingField>
@@ -143,9 +144,9 @@
                 <label>Men Mikvah</label>
             </value>
             <value>
-                <fullName>Men's Mikvah</fullName>
+                <fullName>Men&apos;s Mikvah</fullName>
                 <default>false</default>
-                <label>Men's Mikvah</label>
+                <label>Men&apos;s Mikvah</label>
             </value>
             <value>
                 <fullName>Mesibas Shabbos</fullName>
@@ -269,213 +270,213 @@
             </value>
         </valueSetDefinition>
         <valueSettings>
-            <valueName>11 Nison</valueName>
-            <controllingFieldValue>Events</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>19 Kislev</valueName>
-            <controllingFieldValue>Events</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>20 Av</valueName>
-            <controllingFieldValue>Events</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>3 Tamuz</valueName>
-            <controllingFieldValue>Events</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Advertising</valueName>
-            <controllingFieldValue>Advertising</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Avos Ubonim</valueName>
-            <controllingFieldValue>Events</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Big Hall</valueName>
-            <controllingFieldValue>Hall Rental</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Birthday Club</valueName>
-            <controllingFieldValue>General</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Break Fast</valueName>
-            <controllingFieldValue>Events</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Building Fund</valueName>
-            <controllingFieldValue>General</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Building Upkeep</valueName>
-            <controllingFieldValue>General</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Chanuka</valueName>
-            <controllingFieldValue>Kibudim</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Chanukah</valueName>
-            <controllingFieldValue>Events</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Chazak</valueName>
-            <controllingFieldValue>Kibudim</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Cheder Sheni</valueName>
-            <controllingFieldValue>Hall Rental</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Children Books</valueName>
-            <controllingFieldValue>General</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Electric Bill</valueName>
-            <controllingFieldValue>General</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Farbrengen Genaral</valueName>
-            <controllingFieldValue>Events</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Furniture</valueName>
-            <controllingFieldValue>General</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>General</valueName>
-            <controllingFieldValue>Grants</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Hagbah Yearly</valueName>
-            <controllingFieldValue>Kibudim</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Hoshanos</valueName>
             <controllingFieldValue>Services</controllingFieldValue>
+            <valueName>Hoshanos</valueName>
         </valueSettings>
         <valueSettings>
-            <valueName>Kiddush</valueName>
-            <controllingFieldValue>Events</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Kids Rally</valueName>
-            <controllingFieldValue>Events</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Maos Chitim</valueName>
-            <controllingFieldValue>Grants</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Mashapia</valueName>
-            <controllingFieldValue>General</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Men Mikvah</valueName>
-            <controllingFieldValue>General</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Men's Mikvah</valueName>
             <controllingFieldValue>Shul Renovation</controllingFieldValue>
+            <valueName>Men&apos;s Mikvah</valueName>
         </valueSettings>
         <valueSettings>
-            <valueName>Mesibas Shabbos</valueName>
-            <controllingFieldValue>Events</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
+            <controllingFieldValue>Shul Renovation</controllingFieldValue>
+            <controllingFieldValue>General</controllingFieldValue>
             <valueName>Mikvah Fund</valueName>
-            <controllingFieldValue>General</controllingFieldValue>
-            <controllingFieldValue>Shul Renovation</controllingFieldValue>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Shul Renovation</controllingFieldValue>
             <valueName>New Flooring</valueName>
-            <controllingFieldValue>Shul Renovation</controllingFieldValue>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Advertising</controllingFieldValue>
+            <valueName>Advertising</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <valueName>11 Nison</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <valueName>19 Kislev</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <valueName>20 Av</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <valueName>3 Tamuz</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <valueName>Avos Ubonim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <valueName>Break Fast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <valueName>Chanukah</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <valueName>Farbrengen Genaral</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <valueName>Kiddush</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <valueName>Kids Rally</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <valueName>Mesibas Shabbos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Events</controllingFieldValue>
             <valueName>Nshei</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Events</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Pesach</valueName>
-            <controllingFieldValue>Kibudim</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Psicha Yearly</valueName>
-            <controllingFieldValue>Kibudim</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
             <valueName>Purim</valueName>
-            <controllingFieldValue>Events</controllingFieldValue>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Events</controllingFieldValue>
             <valueName>Rosh Chodesh Kislev</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Events</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Rosh Hashana</valueName>
-            <controllingFieldValue>Kibudim</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Seforim</valueName>
-            <controllingFieldValue>General</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Shabbos</valueName>
-            <controllingFieldValue>Kibudim</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
             <valueName>Shabbos Kids Program</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Events</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Shavuos</valueName>
-            <controllingFieldValue>Kibudim</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
             <valueName>Shiurim</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Events</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Simchas Torah</valueName>
-            <controllingFieldValue>Kibudim</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
             <valueName>Siyum Harambam</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Events</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Sukkos</valueName>
-            <controllingFieldValue>Kibudim</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
             <valueName>Tanya</valueName>
-            <controllingFieldValue>Events</controllingFieldValue>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Events</controllingFieldValue>
             <valueName>Tishrei</valueName>
-            <controllingFieldValue>Events</controllingFieldValue>
         </valueSettings>
         <valueSettings>
-            <valueName>Tishrei Yom Tov Fund</valueName>
-            <controllingFieldValue>Grants</controllingFieldValue>
+            <controllingFieldValue>General</controllingFieldValue>
+            <valueName>Birthday Club</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>General</controllingFieldValue>
+            <valueName>Building Fund</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General</controllingFieldValue>
+            <valueName>Building Upkeep</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General</controllingFieldValue>
+            <valueName>Children Books</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General</controllingFieldValue>
+            <valueName>Electric Bill</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General</controllingFieldValue>
+            <valueName>Furniture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General</controllingFieldValue>
+            <valueName>Mashapia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General</controllingFieldValue>
+            <valueName>Men Mikvah</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General</controllingFieldValue>
+            <valueName>Seforim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General</controllingFieldValue>
             <valueName>Torah Fund</valueName>
-            <controllingFieldValue>General</controllingFieldValue>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>General</controllingFieldValue>
             <valueName>Unknown</valueName>
-            <controllingFieldValue>General</controllingFieldValue>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>General</controllingFieldValue>
             <valueName>Yahrtzeit/Yizkor</valueName>
-            <controllingFieldValue>General</controllingFieldValue>
         </valueSettings>
         <valueSettings>
-            <valueName>Yom Kipur</valueName>
+            <controllingFieldValue>Grants</controllingFieldValue>
+            <valueName>General</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Grants</controllingFieldValue>
+            <valueName>Maos Chitim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Grants</controllingFieldValue>
+            <valueName>Tishrei Yom Tov Fund</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hall Rental</controllingFieldValue>
+            <valueName>Big Hall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hall Rental</controllingFieldValue>
+            <valueName>Cheder Sheni</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Kibudim</controllingFieldValue>
+            <valueName>Chanuka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+            <valueName>Chazak</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+            <valueName>Hagbah Yearly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+            <valueName>Pesach</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+            <valueName>Psicha Yearly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+            <valueName>Rosh Hashana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+            <valueName>Shabbos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+            <valueName>Shavuos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+            <valueName>Simchas Torah</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+            <valueName>Sukkos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kibudim</controllingFieldValue>
+            <valueName>Yom Kipur</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

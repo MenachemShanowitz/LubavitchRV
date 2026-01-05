@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Numeric_Check_Number</fullName>
+    <active>true</active>
+    <errorConditionFormula>! ISBLANK( OneCRM__Check_Number__c )
+            &amp;&amp;
+            ! ISNUMBER( OneCRM__Check_Number__c)</errorConditionFormula>
+    <errorDisplayField>OneCRM__Check_Number__c</errorDisplayField>
+    <errorMessage>Check number must be numeric</errorMessage>
+</ValidationRule>

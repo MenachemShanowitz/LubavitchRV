@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Cannot_change_CC_Successful_transactions</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL( OneCRM__Status__c , &quot;Success&quot;) &amp;&amp; ISCHANGED( OneCRM__Credit_Card__c ) &amp;&amp; RecordType.Name  = &quot;Payment&quot;</errorConditionFormula>
+    <errorDisplayField>OneCRM__Credit_Card__c</errorDisplayField>
+    <errorMessage>Cannot change the credit card on successful transactions.</errorMessage>
+</ValidationRule>

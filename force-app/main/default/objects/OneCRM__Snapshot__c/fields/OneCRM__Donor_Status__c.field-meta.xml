@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Donor_Status__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The status of the current donor</description>
+    <label>Donor Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Prospective Donor</fullName>
+                <default>true</default>
+                <label>Prospective Donor</label>
+            </value>
+            <value>
+                <fullName>Active Donor</fullName>
+                <default>false</default>
+                <label>Active Donor</label>
+            </value>
+            <value>
+                <fullName>Lapsed Donor</fullName>
+                <default>false</default>
+                <label>Lapsed Donor</label>
+            </value>
+            <value>
+                <fullName>Major Donor</fullName>
+                <default>false</default>
+                <label>Major Donor</label>
+            </value>
+            <value>
+                <fullName>Top Donor</fullName>
+                <default>false</default>
+                <label>Top Donor</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

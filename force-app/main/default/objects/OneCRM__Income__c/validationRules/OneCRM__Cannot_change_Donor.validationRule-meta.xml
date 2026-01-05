@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Cannot_change_Donor</fullName>
+    <active>false</active>
+    <description>Incomes must be attributed to the proper people and then not changed. May be deleted and then recreated.</description>
+    <errorConditionFormula>!ISNEW() &amp;&amp; ISCHANGED( OneCRM__Donor__c )</errorConditionFormula>
+    <errorDisplayField>OneCRM__Donor__c</errorDisplayField>
+    <errorMessage>The Donor field cannot be changed. To move an Income, please delete any relevant payments, then delete the record, and then recreate it.</errorMessage>
+</ValidationRule>

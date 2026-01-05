@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Can_only_associate_with_Creating_PPs</fullName>
+    <active>true</active>
+    <description>Can only associate with Payment Programs that have a status of &apos;Creating&apos;.</description>
+    <errorConditionFormula>(ISCHANGED(OneCRM__Payment_Plan__c )|| ISNEW())
+
+            &amp;&amp;(!ISBLANK(OneCRM__Payment_Plan__c)&amp;&amp;!ISNULL(OneCRM__Payment_Plan__c))
+
+            &amp;&amp;!ISPICKVAL(OneCRM__Payment_Plan__r.OneCRM__Status__c,&apos;Creating&apos;)</errorConditionFormula>
+    <errorDisplayField>OneCRM__Payment_Plan__c</errorDisplayField>
+    <errorMessage>You cannot associate an income with a Payment Program that does not have a Status of &apos;Creating&apos;</errorMessage>
+</ValidationRule>

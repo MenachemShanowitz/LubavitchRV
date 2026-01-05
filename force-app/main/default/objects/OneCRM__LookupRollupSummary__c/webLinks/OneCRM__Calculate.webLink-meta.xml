@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Calculate</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Full Calculate</masterLabel>
+    <openType>sidebar</openType>
+    <page>OneCRM__rollupcalculate</page>
+    <protected>false</protected>
+</WebLink>

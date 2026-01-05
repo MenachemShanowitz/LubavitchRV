@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Charge_Start_Date__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The date of the first payment. The Schedule determines all payments relative to this date.</description>
+    <inlineHelpText>The date of the first payment. The Schedule determines all payments relative to this date.</inlineHelpText>
+    <label>Charge Start Date</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

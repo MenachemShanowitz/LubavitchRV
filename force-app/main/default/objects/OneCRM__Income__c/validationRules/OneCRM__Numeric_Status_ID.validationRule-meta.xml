@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Numeric_Status_ID</fullName>
+    <active>true</active>
+    <errorConditionFormula>!ISBLANK(OneCRM__StatusID__c) &amp;&amp; !ISNUMBER( OneCRM__StatusID__c )</errorConditionFormula>
+    <errorDisplayField>OneCRM__StatusID__c</errorDisplayField>
+    <errorMessage>StatusId must be numeric.</errorMessage>
+</ValidationRule>

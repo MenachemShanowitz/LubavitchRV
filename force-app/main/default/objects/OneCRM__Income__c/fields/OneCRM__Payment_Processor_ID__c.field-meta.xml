@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Payment_Processor_ID__c</fullName>
+    <deprecated>false</deprecated>
+    <description>the id of the processor to use when charging this income</description>
+    <externalId>false</externalId>
+    <label>Payment Processor ID</label>
+    <length>50</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

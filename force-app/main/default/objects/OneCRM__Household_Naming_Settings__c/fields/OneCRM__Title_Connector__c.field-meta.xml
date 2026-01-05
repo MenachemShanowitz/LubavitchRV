@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Title_Connector__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The connector of the title</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Text or symbol to use when connecting titles, for example Rabbi &amp; Mrs. Ezagui or Rabbi and Mrs. Ezagui</inlineHelpText>
+    <label>Title Connector</label>
+    <length>10</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

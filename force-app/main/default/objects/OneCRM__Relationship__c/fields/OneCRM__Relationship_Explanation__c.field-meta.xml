@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Relationship_Explanation__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF(OneCRM__Related_Contact__c != null,
+    OneCRM__Related_Contact__r.FirstName + &quot; &quot; +
+    OneCRM__Related_Contact__r.LastName,
+  OneCRM__RelatedAccount__r.Name) + &quot; &quot; +
+IF(ISPICKVAL(OneCRM__Status__c, &quot;Current&quot;),
+  &quot;is&quot;,
+  &quot;was&quot;) + &quot; &quot; +
+IF(OneCRM__Contact__c != null,
+    OneCRM__Contact__r.FirstName + &quot; &quot; +
+    OneCRM__Contact__r.LastName,
+  OneCRM__Account__r.Name) + &quot;&apos;s &quot; +
+IF( $Setup.OneCRM__Relationship_Settings__c.OneCRM__Reciprocal_Method__c = &quot;Value Inversion&quot;
+&amp;&amp; CONTAINS(TEXT(OneCRM__Type__c), $Label.onecrm__Relationship_Split),
+RIGHT(TEXT(OneCRM__Type__c), LEN(TEXT(OneCRM__Type__c))-FIND($Label.onecrm__Relationship_Split,TEXT(OneCRM__Type__c))),
+TEXT(OneCRM__Type__c)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Relationship Explanation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

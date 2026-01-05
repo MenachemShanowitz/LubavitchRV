@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Credit_cards_cannot_be_reassigned</fullName>
+    <active>false</active>
+    <errorConditionFormula>!ISNEW() &amp;&amp; ISCHANGED( OneCRM__Cardholder__c )</errorConditionFormula>
+    <errorDisplayField>OneCRM__Cardholder__c</errorDisplayField>
+    <errorMessage>Credit cards cannot be moved to different people. Please create a new card for the other person.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Graduation_Year</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+LEN(OneCRM__Graduation_Year__c) &gt; 0,
+OR(
+NOT(ISNUMBER(OneCRM__Graduation_Year__c)),
+LEN(OneCRM__Graduation_Year__c) != 4)
+)</errorConditionFormula>
+    <errorMessage>Graduation year must be a valid four-digit year</errorMessage>
+</ValidationRule>

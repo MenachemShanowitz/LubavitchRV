@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Payment_Plan__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>The payment program that is paying off this income</description>
+    <inlineHelpText>The payment program that is paying off this income</inlineHelpText>
+    <label>Payment Plan</label>
+    <referenceTo>OneCRM__Payment_Program__c</referenceTo>
+    <relationshipLabel>Incomes (Payment Plan)</relationshipLabel>
+    <relationshipName>Incomes</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

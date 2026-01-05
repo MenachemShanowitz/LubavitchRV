@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Expired__c</fullName>
+    <deprecated>false</deprecated>
+    <formula>!ISNULL(OneCRM__Expiration_Date_Date__c) &amp;&amp; OneCRM__Expiration_Date_Date__c &lt; TODAY()</formula>
+    <label>Expired</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Greater_YOY_Donation_Sum__c</fullName>
+    <deprecated>false</deprecated>
+    <formula>OneCRM__YTD_Donation_Summary__c &gt; OneCRM__Last_Year_Donation_Summary__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>This Year Sum &gt; Last Year Sum</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

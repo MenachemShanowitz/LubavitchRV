@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__SubType__c</fullName>
+    <deprecated>false</deprecated>
+    <label>SubType</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aliyah</fullName>
+                <default>false</default>
+                <label>Aliyah</label>
+            </value>
+            <value>
+                <fullName>Rosh Hashana</fullName>
+                <default>false</default>
+                <label>Rosh Hashana</label>
+            </value>
+            <value>
+                <fullName>Shabbos</fullName>
+                <default>false</default>
+                <label>Shabbos</label>
+            </value>
+            <value>
+                <fullName>Shavuos</fullName>
+                <default>false</default>
+                <label>Shavuos</label>
+            </value>
+            <value>
+                <fullName>Simchas Torah</fullName>
+                <default>false</default>
+                <label>Simchas Torah</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

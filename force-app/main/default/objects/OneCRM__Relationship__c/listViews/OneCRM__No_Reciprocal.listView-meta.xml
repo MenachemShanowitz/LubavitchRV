@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__No_Reciprocal</fullName>
+    <columns>NAME</columns>
+    <columns>OneCRM__Account__c</columns>
+    <columns>OneCRM__RelatedAccount__c</columns>
+    <columns>OneCRM__Status__c</columns>
+    <columns>OneCRM__Type__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OneCRM__ReciprocalRelationship__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>No Reciprocal</label>
+    <language>en_US</language>
+</ListView>

@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Detail__c</fullName>
     <label>Detail</label>
+    <required>false</required>
     <type>Picklist</type>
     <valueSet>
         <controllingField>SubType__c</controllingField>
@@ -68,9 +69,9 @@
                 <label>Hagbah</label>
             </value>
             <value>
-                <fullName>Kol Hane'orim</fullName>
+                <fullName>Kol Hane&apos;orim</fullName>
                 <default>false</default>
-                <label>Kol Hane'orim</label>
+                <label>Kol Hane&apos;orim</label>
             </value>
             <value>
                 <fullName>Kol Nidrei</fullName>
@@ -103,98 +104,98 @@
                 <label>Vayikra</label>
             </value>
             <value>
-                <fullName>Vehoyo Zar'acho</fullName>
+                <fullName>Vehoyo Zar&apos;acho</fullName>
                 <default>false</default>
-                <label>Vehoyo Zar'acho</label>
+                <label>Vehoyo Zar&apos;acho</label>
             </value>
         </valueSetDefinition>
         <valueSettings>
-            <valueName>Aliyah</valueName>
+            <controllingFieldValue>Sukkos</controllingFieldValue>
             <controllingFieldValue>Shabbos</controllingFieldValue>
             <controllingFieldValue>Simchas Torah</controllingFieldValue>
+            <valueName>Aliyah</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Sukkos</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Ata Horisa</valueName>
             <controllingFieldValue>Simchas Torah</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Bamidbar</valueName>
-            <controllingFieldValue>Psicha Yearly</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Bamidbor</valueName>
-            <controllingFieldValue>Hagbah Yearly</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Bereshis</valueName>
-            <controllingFieldValue>Hagbah Yearly</controllingFieldValue>
-            <controllingFieldValue>Psicha Yearly</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Choson Breishis</valueName>
-            <controllingFieldValue>Simchas Torah</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Choson Torah</valueName>
-            <controllingFieldValue>Simchas Torah</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Devarim</valueName>
-            <controllingFieldValue>Psicha Yearly</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Devorim</valueName>
-            <controllingFieldValue>Hagbah Yearly</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
             <valueName>Gelilah</valueName>
-            <controllingFieldValue>Simchas Torah</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Sukkos</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Geshem</valueName>
             <controllingFieldValue>Simchas Torah</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
             <valueName>Hagbah</valueName>
-            <controllingFieldValue>Simchas Torah</controllingFieldValue>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Sukkos</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Kol Hane'orim</valueName>
             <controllingFieldValue>Simchas Torah</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Kol Nidrei</valueName>
-            <controllingFieldValue>Yom Kipur</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Maftir Yona</valueName>
-            <controllingFieldValue>Yom Kipur</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
             <valueName>Psicha</valueName>
-            <controllingFieldValue>Simchas Torah</controllingFieldValue>
-            <controllingFieldValue>Sukkos</controllingFieldValue>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Yom Kipur</controllingFieldValue>
+            <valueName>Kol Nidrei</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yom Kipur</controllingFieldValue>
+            <valueName>Maftir Yona</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hagbah Yearly</controllingFieldValue>
+            <valueName>Bamidbor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hagbah Yearly</controllingFieldValue>
+            <controllingFieldValue>Psicha Yearly</controllingFieldValue>
+            <valueName>Bereshis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hagbah Yearly</controllingFieldValue>
+            <valueName>Devorim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hagbah Yearly</controllingFieldValue>
+            <controllingFieldValue>Psicha Yearly</controllingFieldValue>
             <valueName>Shemos</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Hagbah Yearly</controllingFieldValue>
             <controllingFieldValue>Psicha Yearly</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
-            <valueName>Tal</valueName>
-            <controllingFieldValue>Pesach</controllingFieldValue>
-        </valueSettings>
-        <valueSettings>
             <valueName>Vayikra</valueName>
-            <controllingFieldValue>Hagbah Yearly</controllingFieldValue>
-            <controllingFieldValue>Psicha Yearly</controllingFieldValue>
         </valueSettings>
         <valueSettings>
-            <valueName>Vehoyo Zar'acho</valueName>
+            <controllingFieldValue>Pesach</controllingFieldValue>
+            <valueName>Tal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Psicha Yearly</controllingFieldValue>
+            <valueName>Bamidbar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Psicha Yearly</controllingFieldValue>
+            <valueName>Devarim</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Simchas Torah</controllingFieldValue>
+            <valueName>Ata Horisa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Simchas Torah</controllingFieldValue>
+            <valueName>Choson Breishis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Simchas Torah</controllingFieldValue>
+            <valueName>Choson Torah</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Simchas Torah</controllingFieldValue>
+            <valueName>Geshem</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Simchas Torah</controllingFieldValue>
+            <valueName>Kol Hane&apos;orim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Simchas Torah</controllingFieldValue>
+            <valueName>Vehoyo Zar&apos;acho</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

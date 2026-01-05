@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Last_4_digits_format</fullName>
+    <active>true</active>
+    <description>Last 4 digits must be 4 digits and must be in the proper format</description>
+    <errorConditionFormula>!ISNUMBER( OneCRM__Last4__c )
+||
+LEN(OneCRM__Last4__c) &lt;&gt; 4</errorConditionFormula>
+    <errorDisplayField>OneCRM__Last4__c</errorDisplayField>
+    <errorMessage>The last 4 digits of the credit card are required for every record.</errorMessage>
+</ValidationRule>

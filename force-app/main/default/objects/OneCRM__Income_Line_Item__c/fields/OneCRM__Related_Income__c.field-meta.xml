@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Related_Income__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>used to related a &quot;payment line item&quot; to the charge it&apos;s paying for.</description>
+    <label>Income</label>
+    <referenceTo>OneCRM__Income__c</referenceTo>
+    <relationshipLabel>Payment Line Items</relationshipLabel>
+    <relationshipName>Related_Incomes</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

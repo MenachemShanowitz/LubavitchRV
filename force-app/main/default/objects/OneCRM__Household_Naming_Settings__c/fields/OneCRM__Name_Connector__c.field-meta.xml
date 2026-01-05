@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneCRM__Name_Connector__c</fullName>
+    <deprecated>false</deprecated>
+    <description>When connecting two names, would you like to use &quot;&amp;&quot; or &quot;and&quot;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When connecting two names, would you like to use &quot;&amp;&quot; or &quot;and&quot;</inlineHelpText>
+    <label>Name Connector</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
