@@ -1,0 +1,466 @@
+<template>
+    <div class="slds-grid slds-wrap payment-matcher" onkeydown={handleKeyDown}>
+        <!-- Left Panel: Import List -->
+        <div class="slds-col slds-size_1-of-3 slds-p-right_small list-panel">
+            <lightning-card title="Payment Imports" icon-name="standard:payment_gateway">
+                <!-- Filter -->
+                <div slot="actions">
+                    <lightning-combobox
+                        value={selectedFilter}
+                        options={filterOptions}
+                        onchange={handleFilterChange}
+                        variant="label-hidden"
+                        dropdown-alignment="right"
+                    ></lightning-combobox>
+                </div>
+
+                <!-- Import List -->
+                <div class="slds-scrollable_y import-list">
+                    <template if:true={imports.length}>
+                        <ul class="slds-has-dividers_bottom-space">
+                            <template for:each={imports} for:item="imp">
+                                <li
+                                    key={imp.id}
+                                    class={imp.listItemClass}
+                                    data-id={imp.id}
+                                    onclick={handleImportSelect}
+                                >
+                                    <div class="slds-grid slds-grid_vertical-align-center slds-p-around_small import-item"
+                                         data-selected={imp.isSelected}>
+                                        <div class="slds-col slds-grow">
+                                            <p class="slds-text-body_regular slds-text-color_default">
+                                                <strong>{imp.fullName}</strong>
+                                            </p>
+                                            <p class="slds-text-body_small slds-text-color_weak">
+                                                {imp.formattedDate} &bull; {imp.formattedAmount}
+                                            </p>
+                                            <template if:true={imp.notes}>
+                                                <p class="slds-text-body_small slds-text-color_weak slds-truncate" title={imp.notes}>
+                                                    {imp.notes}
+                                                </p>
+                                            </template>
+                                        </div>
+                                        <div class="slds-col slds-no-flex">
+                                            <span class={imp.statusClass}>{imp.status}</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </template>
+                        </ul>
+                    </template>
+                    <template if:false={imports.length}>
+                        <div class="slds-p-around_medium slds-text-align_center slds-text-color_weak">
+                            No imports found for this filter.
+                        </div>
+                    </template>
+                </div>
+            </lightning-card>
+        </div>
+
+        <!-- Right Panel: Matching Wizard -->
+        <div class="slds-col slds-size_2-of-3 slds-p-left_small detail-panel">
+            <template if:true={hasSelectedImport}>
+                <lightning-card>
+                    <!-- Header with import details -->
+                    <div slot="title" class="slds-grid slds-grid_vertical-align-center">
+                        <span class="slds-text-heading_medium">{selectedImport.fullName}</span>
+                        <span class="slds-m-left_small slds-badge slds-badge_inverse">{selectedImport.formattedAmount}</span>
+                    </div>
+
+                    <!-- Import Details Summary -->
+                    <div class="slds-p-horizontal_medium slds-p-bottom_small">
+                        <div class="slds-grid slds-wrap slds-gutters_small">
+                            <div class="slds-col slds-size_1-of-4">
+                                <p class="slds-text-title_caps">Date</p>
+                                <p>{selectedImport.formattedDate}</p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-4">
+                                <p class="slds-text-title_caps">Email</p>
+                                <p>{selectedImport.email}</p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-4">
+                                <p class="slds-text-title_caps">Payment Type</p>
+                                <p>{selectedImport.paymentType}</p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-4">
+                                <p class="slds-text-title_caps">Is Membership</p>
+                                <p>
+                                    <template if:true={selectedImport.isMembership}>Yes</template>
+                                    <template if:false={selectedImport.isMembership}>No</template>
+                                </p>
+                            </div>
+                        </div>
+                        <template if:true={selectedImport.notes}>
+                            <div class="slds-m-top_small">
+                                <p class="slds-text-title_caps">Notes</p>
+                                <p class="slds-text-color_weak">{selectedImport.notes}</p>
+                            </div>
+                        </template>
+                    </div>
+
+                    <!-- Step Indicator -->
+                    <div class="slds-p-horizontal_medium slds-p-vertical_small step-indicator">
+                        <lightning-progress-indicator current-step={currentStep} type="base" variant="base">
+                            <lightning-progress-step label="Match Household" value="contact"></lightning-progress-step>
+                            <lightning-progress-step label="Check Duplicates" value="duplicate"></lightning-progress-step>
+                            <lightning-progress-step label="Apply to Pledge" value="pledge"></lightning-progress-step>
+                        </lightning-progress-indicator>
+                    </div>
+
+                    <!-- Loading Spinner -->
+                    <template if:true={isLoading}>
+                        <div class="slds-is-relative slds-p-around_large">
+                            <lightning-spinner alternative-text="Loading..." size="medium"></lightning-spinner>
+                        </div>
+                    </template>
+
+                    <!-- Step Content -->
+                    <template if:false={isLoading}>
+                        <!-- STEP 1: Household Matching -->
+                        <template if:true={isContactStep}>
+                            <div class="slds-p-around_medium">
+                                <h3 class="slds-text-heading_small slds-m-bottom_small">
+                                    Potential Household Matches
+                                </h3>
+
+                                <template if:true={householdMatches.length}>
+                                    <div class="slds-scrollable_y match-list">
+                                        <template for:each={householdMatches} for:item="match">
+                                            <div
+                                                key={match.id}
+                                                class="slds-box slds-m-bottom_x-small match-card"
+                                                data-id={match.id}
+                                                data-selected={match.isSelected}
+                                                onclick={handleHouseholdSelect}
+                                            >
+                                                <div class="slds-grid slds-grid_vertical-align-center">
+                                                    <div class="slds-col slds-grow">
+                                                        <p class="slds-text-body_regular">
+                                                            <strong>{match.name}</strong>
+                                                        </p>
+                                                        <p class="slds-text-body_small slds-text-color_weak">
+                                                            Primary: {match.primaryContactEmail}
+                                                        </p>
+                                                        <template if:true={match.secondaryContactEmail}>
+                                                            <p class="slds-text-body_small slds-text-color_weak">
+                                                                Secondary: {match.secondaryContactEmail}
+                                                            </p>
+                                                        </template>
+                                                    </div>
+                                                    <div class="slds-col slds-no-flex slds-text-align_right">
+                                                        <span class={match.confidenceClass}>
+                                                            {match.confidence}% match
+                                                        </span>
+                                                        <p class="slds-text-body_small slds-text-color_weak">
+                                                            {match.matchReason}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </template>
+
+                                <template if:true={noHouseholdMatches}>
+                                    <div class="slds-illustration slds-illustration_small slds-p-around_medium">
+                                        <p class="slds-text-color_weak">No matching households found</p>
+                                    </div>
+                                </template>
+
+                                <!-- Manual Search Toggle -->
+                                <div class="slds-m-top_medium">
+                                    <lightning-button
+                                        label={manualSearchButtonLabel}
+                                        variant="base"
+                                        onclick={handleManualSearchToggle}
+                                        icon-name="utility:search"
+                                    ></lightning-button>
+                                </div>
+
+                                <template if:true={showManualSearch}>
+                                    <div class="slds-m-top_small">
+                                        <c-soql-lookup
+                                            label="Search Households"
+                                            query-template={householdQueryTemplate}
+                                            title-field="Name"
+                                            subtitle-field="OneCRM__Primary_Contact__r.Email"
+                                            icon-name="standard:household"
+                                            object-api-name="Account"
+                                            onselectionchange={handleManualHouseholdSelect}
+                                        ></c-soql-lookup>
+                                    </div>
+                                </template>
+
+                                <!-- Actions -->
+                                <div class="slds-m-top_medium slds-grid slds-grid_align-spread">
+                                    <lightning-button
+                                        label="Skip"
+                                        onclick={handleSkipHousehold}
+                                    ></lightning-button>
+                                    <lightning-button
+                                        label="Confirm Household"
+                                        variant="brand"
+                                        disabled={isHouseholdButtonDisabled}
+                                        onclick={handleConfirmHousehold}
+                                    ></lightning-button>
+                                </div>
+                            </div>
+                        </template>
+
+                        <!-- STEP 2: Duplicate Check -->
+                        <template if:true={isDuplicateStep}>
+                            <div class="slds-p-around_medium">
+                                <h3 class="slds-text-heading_small slds-m-bottom_small">
+                                    Existing Payments (sorted by closest date)
+                                </h3>
+
+                                <div class="slds-box slds-m-bottom_small slds-theme_info">
+                                    <p>
+                                        <strong>Matched to:</strong> {selectedImport.matchedContactName}
+                                        ({selectedImport.matchedAccountName})
+                                    </p>
+                                </div>
+
+                                <template if:true={existingPayments.length}>
+                                    <div class="slds-scrollable_y match-list">
+                                        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                                            <thead>
+                                                <tr class="slds-line-height_reset">
+                                                    <th scope="col">Date</th>
+                                                    <th scope="col">Amount</th>
+                                                    <th scope="col">Type</th>
+                                                    <th scope="col">Days Apart</th>
+                                                    <th scope="col">Notes</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <template for:each={existingPayments} for:item="payment">
+                                                    <tr key={payment.id} class={payment.rowClass}>
+                                                        <td>{payment.formattedDate}</td>
+                                                        <td>{payment.formattedAmount}</td>
+                                                        <td>{payment.paymentType}</td>
+                                                        <td>
+                                                            <template if:true={payment.isPotentialDup}>
+                                                                <span class="slds-badge slds-badge_warning">{payment.daysDifference} days</span>
+                                                            </template>
+                                                            <template if:false={payment.isPotentialDup}>
+                                                                {payment.daysDifference} days
+                                                            </template>
+                                                        </td>
+                                                        <td class="slds-truncate" title={payment.notes}>{payment.notes}</td>
+                                                    </tr>
+                                                </template>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </template>
+
+                                <template if:true={noExistingPayments}>
+                                    <div class="slds-illustration slds-illustration_small slds-p-around_medium">
+                                        <p class="slds-text-color_weak">No existing payments found in the past 60 days</p>
+                                    </div>
+                                </template>
+
+                                <!-- Actions -->
+                                <div class="slds-m-top_medium slds-grid slds-grid_align-spread">
+                                    <div>
+                                        <lightning-button
+                                            label="Back"
+                                            onclick={handleBack}
+                                            class="slds-m-right_small"
+                                        ></lightning-button>
+                                        <lightning-button
+                                            label="This is a Duplicate"
+                                            variant="destructive"
+                                            onclick={handleMarkDuplicate}
+                                        ></lightning-button>
+                                    </div>
+                                    <lightning-button
+                                        label="Not a Duplicate - Continue"
+                                        variant="brand"
+                                        onclick={handleNotDuplicate}
+                                    ></lightning-button>
+                                </div>
+                            </div>
+                        </template>
+
+                        <!-- STEP 3: Pledge Selection -->
+                        <template if:true={isPledgeStep}>
+                            <div class="slds-p-around_medium">
+                                <h3 class="slds-text-heading_small slds-m-bottom_small">
+                                    Unpaid Pledges (sorted by closest date
+                                    <template if:true={selectedImport.isMembership}>, membership first</template>)
+                                </h3>
+
+                                <template if:true={unpaidPledges.length}>
+                                    <div class="slds-scrollable_y match-list">
+                                        <template for:each={unpaidPledges} for:item="pledge">
+                                            <div
+                                                key={pledge.id}
+                                                class="slds-box slds-m-bottom_x-small match-card"
+                                                data-id={pledge.id}
+                                                data-selected={pledge.isSelected}
+                                                data-disabled={pledge.cantApply}
+                                                onclick={handlePledgeSelect}
+                                            >
+                                                <div class="slds-grid slds-grid_vertical-align-start">
+                                                    <div class="slds-col slds-grow">
+                                                        <p class="slds-text-body_regular">
+                                                            <strong>{pledge.name}</strong>
+                                                            <template if:true={pledge.campaignType}>
+                                                                <span class="slds-badge slds-m-left_x-small">{pledge.campaignType}</span>
+                                                            </template>
+                                                        </p>
+                                                        <p class="slds-text-body_small slds-text-color_weak">
+                                                            {pledge.formattedDate} &bull; {pledge.daysDifference} days apart
+                                                        </p>
+                                                        <template if:true={pledge.notes}>
+                                                            <p class="slds-text-body_small slds-text-color_weak slds-m-top_xx-small">
+                                                                <em>{pledge.notes}</em>
+                                                            </p>
+                                                        </template>
+                                                    </div>
+                                                    <div class="slds-col slds-no-flex slds-text-align_right">
+                                                        <p class="slds-text-body_regular">
+                                                            <strong>Outstanding: {pledge.formattedOutstanding}</strong>
+                                                        </p>
+                                                        <p class="slds-text-body_small slds-text-color_weak">
+                                                            of {pledge.formattedAmount}
+                                                        </p>
+                                                        <template if:false={pledge.canApply}>
+                                                            <p class="slds-text-color_error slds-text-body_small slds-m-top_xx-small">
+                                                                Amount too low
+                                                            </p>
+                                                        </template>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </template>
+
+                                <template if:true={noUnpaidPledges}>
+                                    <div class="slds-illustration slds-illustration_small slds-p-around_medium">
+                                        <p class="slds-text-color_weak">No unpaid pledges found with sufficient balance</p>
+                                    </div>
+                                </template>
+
+                                <!-- Create New Pledge Section -->
+                                <div class="slds-m-top_medium slds-border_top slds-p-top_medium">
+                                    <lightning-button
+                                        label={createPledgeButtonLabel}
+                                        variant="neutral"
+                                        icon-name="utility:add"
+                                        onclick={handleToggleCreatePledge}
+                                    ></lightning-button>
+
+                                    <template if:true={showCreatePledge}>
+                                        <div class="slds-box slds-m-top_small slds-theme_shade">
+                                            <h4 class="slds-text-heading_small slds-m-bottom_small">Create New Pledge</h4>
+
+                                            <!-- Campaign Search -->
+                                            <div class="slds-form-element slds-m-bottom_small">
+                                                <label class="slds-form-element__label" for="campaign-search">
+                                                    Campaign <abbr class="slds-required" title="required">*</abbr>
+                                                </label>
+                                                <div class="slds-form-element__control">
+                                                    <lightning-input
+                                                        type="text"
+                                                        placeholder="Search campaigns (type at least 2 characters)..."
+                                                        onkeyup={handleCampaignSearch}
+                                                        variant="label-hidden"
+                                                    ></lightning-input>
+                                                </div>
+                                                <template if:true={selectedCampaignName}>
+                                                    <div class="slds-m-top_x-small">
+                                                        <span class="slds-badge slds-badge_inverse">{selectedCampaignName}</span>
+                                                    </div>
+                                                </template>
+                                            </div>
+
+                                            <!-- Campaign Search Results -->
+                                            <template if:true={hasCampaignSearchResults}>
+                                                <div class="slds-scrollable_y campaign-results slds-m-bottom_small" style="max-height: 150px;">
+                                                    <template for:each={campaignSearchResults} for:item="campaign">
+                                                        <div
+                                                            key={campaign.id}
+                                                            class="slds-box slds-box_x-small slds-m-bottom_xx-small campaign-item"
+                                                            data-id={campaign.id}
+                                                            data-selected={campaign.isSelected}
+                                                            onclick={handleCampaignSelect}
+                                                        >
+                                                            <p class="slds-text-body_small">{campaign.displayName}</p>
+                                                        </div>
+                                                    </template>
+                                                </div>
+                                            </template>
+
+                                            <!-- Pledge Date -->
+                                            <div class="slds-form-element slds-m-bottom_small">
+                                                <lightning-input
+                                                    type="date"
+                                                    label="Pledge Date"
+                                                    value={newPledgeDate}
+                                                    onchange={handlePledgeDateChange}
+                                                    required
+                                                ></lightning-input>
+                                            </div>
+
+                                            <!-- Create Button -->
+                                            <lightning-button
+                                                label="Create Pledge & Payment"
+                                                variant="brand"
+                                                disabled={isCreatePledgeAndPaymentDisabled}
+                                                onclick={handleCreatePledgeAndPayment}
+                                            ></lightning-button>
+                                        </div>
+                                    </template>
+                                </div>
+
+                                <!-- Actions -->
+                                <div class="slds-m-top_medium slds-grid slds-grid_align-spread">
+                                    <div>
+                                        <lightning-button
+                                            label="Back"
+                                            onclick={handleBack}
+                                            class="slds-m-right_small"
+                                        ></lightning-button>
+                                        <lightning-button
+                                            label="Skip"
+                                            onclick={handleSkip}
+                                        ></lightning-button>
+                                    </div>
+                                    <lightning-button
+                                        label="Create Payment"
+                                        variant="brand"
+                                        disabled={isCreatePaymentDisabled}
+                                        onclick={handleCreatePayment}
+                                    ></lightning-button>
+                                </div>
+                            </div>
+                        </template>
+                    </template>
+                </lightning-card>
+            </template>
+
+            <!-- No Selection State -->
+            <template if:false={hasSelectedImport}>
+                <lightning-card>
+                    <div class="slds-p-around_large slds-text-align_center">
+                        <lightning-icon
+                            icon-name="utility:touch_action"
+                            size="large"
+                            class="slds-m-bottom_medium"
+                        ></lightning-icon>
+                        <h2 class="slds-text-heading_medium slds-text-color_weak">
+                            Select an import from the list
+                        </h2>
+                        <p class="slds-text-body_regular slds-text-color_weak slds-m-top_small">
+                            Choose a payment import to start the matching process
+                        </p>
+                    </div>
+                </lightning-card>
+            </template>
+        </div>
+    </div>
+</template>

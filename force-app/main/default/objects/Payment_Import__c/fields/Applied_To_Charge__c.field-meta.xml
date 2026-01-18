@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Applied_To_Charge__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Applied To Charge</label>
+    <referenceTo>OneCRM__Income__c</referenceTo>
+    <relationshipLabel>Payment Imports</relationshipLabel>
+    <relationshipName>Payment_Imports</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,170 @@
+/* Payment Matcher Component Styles */
+
+.payment-matcher {
+    height: calc(100vh - 120px);
+    min-height: 600px;
+}
+
+/* List Panel */
+.list-panel {
+    height: 100%;
+}
+
+.list-panel lightning-card {
+    height: 100%;
+}
+
+.import-list {
+    max-height: calc(100vh - 220px);
+    min-height: 400px;
+}
+
+.import-item {
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    border-radius: 4px;
+}
+
+.import-item:hover {
+    background-color: #f3f3f3;
+}
+
+.import-item[data-selected="true"] {
+    background-color: #e5f4fc;
+    border-left: 3px solid #0070d2;
+}
+
+/* Detail Panel */
+.detail-panel {
+    height: 100%;
+}
+
+.detail-panel lightning-card {
+    height: 100%;
+}
+
+/* Step Indicator */
+.step-indicator {
+    border-bottom: 1px solid #dddbda;
+}
+
+/* Match Lists */
+.match-list {
+    max-height: 350px;
+}
+
+.match-card {
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.match-card:hover {
+    background-color: #f7f9fb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.match-card[data-selected="true"] {
+    background-color: #e5f4fc;
+    border-color: #0070d2;
+    box-shadow: 0 0 0 1px #0070d2;
+}
+
+.match-card[data-disabled="true"] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Duplicate Warning */
+.potential-dup {
+    background-color: #fffaed;
+}
+
+.potential-dup:hover {
+    background-color: #fff4d6;
+}
+
+/* Status Badges */
+.slds-badge {
+    font-size: 0.7rem;
+}
+
+.slds-theme_warning {
+    background-color: #fe9339;
+    color: white;
+}
+
+.slds-theme_info {
+    background-color: #0070d2;
+    color: white;
+}
+
+.slds-theme_success {
+    background-color: #04844b;
+    color: white;
+}
+
+.slds-theme_error {
+    background-color: #c23934;
+    color: white;
+}
+
+/* Confidence Colors */
+.slds-text-color_success {
+    color: #04844b;
+    font-weight: bold;
+}
+
+.slds-text-color_warning {
+    color: #fe9339;
+    font-weight: bold;
+}
+
+/* Table Styling */
+.slds-table th {
+    background-color: #f3f3f3;
+}
+
+/* Scrollable areas */
+.slds-scrollable_y {
+    overflow-y: auto;
+}
+
+/* Empty state */
+.slds-illustration {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Campaign Search Results */
+.campaign-item {
+    cursor: pointer;
+    transition: all 0.15s ease;
+    background-color: white;
+}
+
+.campaign-item:hover {
+    background-color: #f7f9fb;
+}
+
+.campaign-item[data-selected="true"] {
+    background-color: #e5f4fc;
+    border-color: #0070d2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .payment-matcher {
+        height: auto;
+    }
+
+    .list-panel,
+    .detail-panel {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .import-list,
+    .match-list {
+        max-height: 300px;
+    }
+}
