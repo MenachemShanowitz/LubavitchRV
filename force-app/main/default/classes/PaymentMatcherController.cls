@@ -539,7 +539,8 @@ public with sharing class PaymentMatcherController {
             OneCRM__Date__c = importRec.Date__c,
             OneCRM__Paid__c = 0,
             OneCRM__Status__c = 'Success',
-            OneCRM__Payment_Type__c = importRec.Payment_Type__c
+            OneCRM__Payment_Type__c = importRec.Payment_Type__c,
+            Created_By_Matching_System__c = true
         );
         insert payment;
 
@@ -560,7 +561,8 @@ public with sharing class PaymentMatcherController {
                 OneCRM__Amount__c = -amountToApply, // Negative for payment
                 OneCRM__Related_Income__c = chargeId,
                 OneCRM__Related_Income_Line_Item__c = chargeLine.Id,
-                OneCRM__Notes__c = importRec.Notes__c
+                OneCRM__Notes__c = importRec.Notes__c,
+                Created_By_Matching_System__c = true
             );
             paymentLineItems.add(paymentLine);
 
@@ -666,8 +668,8 @@ public with sharing class PaymentMatcherController {
             OneCRM__Related_Contact__c = importRec.Matched_Contact__c,
             OneCRM__Date__c = pledgeDate,
             OneCRM__Paid__c = 0,
-            OneCRM__Status__c = 'Success'
-            // Payment_Type__c is null for charges
+            OneCRM__Status__c = 'Success',
+            Created_By_Matching_System__c = true
         );
         insert charge;
 
@@ -679,7 +681,8 @@ public with sharing class PaymentMatcherController {
             OneCRM__Amount__c = importRec.Amount__c, // POSITIVE amount
             OneCRM__Related_Campaign__c = campaignId,
             OneCRM__Type__c = 'Campaign', // Hardcoded per data model
-            OneCRM__Notes__c = importRec.Notes__c
+            OneCRM__Notes__c = importRec.Notes__c,
+            Created_By_Matching_System__c = true
         );
         insert chargeLine;
 
@@ -691,7 +694,8 @@ public with sharing class PaymentMatcherController {
             OneCRM__Date__c = importRec.Date__c, // Payment date from import
             OneCRM__Paid__c = 0,
             OneCRM__Status__c = 'Success',
-            OneCRM__Payment_Type__c = importRec.Payment_Type__c
+            OneCRM__Payment_Type__c = importRec.Payment_Type__c,
+            Created_By_Matching_System__c = true
         );
         insert payment;
 
@@ -703,7 +707,8 @@ public with sharing class PaymentMatcherController {
             OneCRM__Amount__c = -importRec.Amount__c, // NEGATIVE amount
             OneCRM__Related_Income__c = charge.Id,
             OneCRM__Related_Income_Line_Item__c = chargeLine.Id,
-            OneCRM__Notes__c = importRec.Notes__c
+            OneCRM__Notes__c = importRec.Notes__c,
+            Created_By_Matching_System__c = true
             // DO NOT SET: OneCRM__Related_Campaign__c, OneCRM__Type__c
             // Categorization inherited from linked charge line's Campaign
         );
