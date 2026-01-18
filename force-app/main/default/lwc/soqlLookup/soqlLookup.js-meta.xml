@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>SOQL Lookup</masterLabel>
+    <description>A reusable lookup component that accepts a SOQL query template for searching records</description>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage,lightning__AppPage,lightning__HomePage">
+            <property name="label" type="String" label="Label" description="The label for the lookup field" />
+            <property name="placeholder" type="String" label="Placeholder" default="Search..." description="Placeholder text for the search input" />
+            <property name="queryTemplate" type="String" label="SOQL Query Template" description="SOQL query with {searchTerm} placeholder, e.g.: SELECT Id, Name FROM Account WHERE Name LIKE '%{searchTerm}%' LIMIT 10" />
+            <property name="titleField" type="String" label="Title Field" default="Name" description="Field to display as the result title" />
+            <property name="subtitleField" type="String" label="Subtitle Field" description="Field to display as the result subtitle (optional)" />
+            <property name="iconName" type="String" label="Icon Name" default="standard:default" description="SLDS icon name (e.g., standard:account)" />
+            <property name="objectApiName" type="String" label="Object API Name" description="API name of the object (required for initial selection by ID)" />
+            <property name="required" type="Boolean" label="Required" default="false" description="Whether the field is required" />
+            <property name="isMultiEntry" type="Boolean" label="Multi-Select" default="false" description="Allow multiple selections" />
+        </targetConfig>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="label" type="String" label="Label" description="The label for the lookup field" />
+            <property name="placeholder" type="String" label="Placeholder" default="Search..." description="Placeholder text" />
+            <property name="queryTemplate" type="String" label="SOQL Query Template" description="SOQL query with {searchTerm} placeholder" />
+            <property name="titleField" type="String" label="Title Field" default="Name" />
+            <property name="subtitleField" type="String" label="Subtitle Field" />
+            <property name="iconName" type="String" label="Icon Name" default="standard:default" />
+            <property name="objectApiName" type="String" label="Object API Name" />
+            <property name="required" type="Boolean" label="Required" default="false" />
+            <property name="isMultiEntry" type="Boolean" label="Multi-Select" default="false" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

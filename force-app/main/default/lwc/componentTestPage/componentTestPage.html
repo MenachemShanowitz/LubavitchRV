@@ -1,0 +1,62 @@
+<template>
+    <lightning-card title="Component Test Page" icon-name="utility:setup">
+        <div class="slds-p-around_medium">
+            <p class="slds-text-body_regular slds-m-bottom_medium">
+                This page is for testing reusable components.
+            </p>
+
+            <!-- SOQL Lookup Tests -->
+            <div class="slds-box slds-m-bottom_medium">
+                <h2 class="slds-text-heading_small slds-m-bottom_small">SOQL Lookup Component Tests</h2>
+
+                <div class="slds-grid slds-gutters slds-wrap">
+                    <!-- Contact Lookup (Single Select) -->
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-m-bottom_medium">
+                        <div class="slds-box slds-box_x-small">
+                            <h3 class="slds-text-title_caps slds-m-bottom_x-small">Single Select - Contact</h3>
+                            <c-soql-lookup
+                                label="Search Contacts"
+                                placeholder="Type to search contacts..."
+                                query-template={contactQueryTemplate}
+                                title-field="Name"
+                                subtitle-field="Email"
+                                icon-name="standard:contact"
+                                object-api-name="Contact"
+                                onselectionchange={handleContactSelectionChange}>
+                            </c-soql-lookup>
+                            <p class="slds-text-body_small slds-m-top_x-small">
+                                <strong>Selected:</strong> {contactSelectionDisplay}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Account Lookup (Single Select) -->
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-m-bottom_medium">
+                        <div class="slds-box slds-box_x-small">
+                            <h3 class="slds-text-title_caps slds-m-bottom_x-small">Single Select - Account</h3>
+                            <c-soql-lookup
+                                label="Search Accounts"
+                                placeholder="Type to search accounts..."
+                                query-template={accountQueryTemplate}
+                                title-field="Name"
+                                subtitle-field="Industry"
+                                icon-name="standard:account"
+                                object-api-name="Account"
+                                onselectionchange={handleAccountSelectionChange}>
+                            </c-soql-lookup>
+                            <p class="slds-text-body_small slds-m-top_x-small">
+                                <strong>Selected:</strong> {accountSelectionDisplay}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Output -->
+                <div class="slds-m-top_small">
+                    <h3 class="slds-text-title_caps slds-m-bottom_x-small">Last Selection Event</h3>
+                    <pre class="slds-box slds-theme_shade" style="white-space: pre-wrap; font-size: 12px; max-height: 200px; overflow-y: auto;">{lastSelectionEvent}</pre>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>
