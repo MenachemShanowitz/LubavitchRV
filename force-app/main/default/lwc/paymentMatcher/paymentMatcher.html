@@ -216,8 +216,8 @@
 
                                 <div class="slds-box slds-m-bottom_small slds-theme_info">
                                     <p>
-                                        <strong>Matched to:</strong> {selectedImport.matchedContactName}
-                                        ({selectedImport.matchedAccountName})
+                                        <strong>Matched to:</strong>&nbsp;
+                                        <a href={householdUrl} target="_blank" style="color: white; text-decoration: underline;">{selectedImport.matchedAccountName}</a>
                                     </p>
                                 </div>
 
@@ -291,6 +291,13 @@
                                     Unpaid Pledges (sorted by closest date
                                     <template if:true={selectedImport.isMembership}>, membership first</template>)
                                 </h3>
+
+                                <div class="slds-box slds-m-bottom_small slds-theme_info">
+                                    <p>
+                                        <strong>Matched to:</strong>&nbsp;
+                                        <a href={householdUrl} target="_blank" style="color: white; text-decoration: underline;">{selectedImport.matchedAccountName}</a>
+                                    </p>
+                                </div>
 
                                 <template if:true={unpaidPledges.length}>
                                     <div class="slds-scrollable_y match-list">
@@ -367,6 +374,7 @@
                                                     <lightning-input
                                                         type="text"
                                                         placeholder="Search campaigns (type at least 2 characters)..."
+                                                        value={campaignSearchTerm}
                                                         onkeyup={handleCampaignSearch}
                                                         variant="label-hidden"
                                                     ></lightning-input>

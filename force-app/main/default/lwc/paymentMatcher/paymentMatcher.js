@@ -48,6 +48,7 @@ export default class PaymentMatcher extends LightningElement {
 
     // Create Pledge section
     @track showCreatePledge = false;
+    @track campaignSearchTerm = '';
     @track campaignSearchResults = [];
     @track selectedCampaignId = null;
     @track selectedCampaignName = null;
@@ -177,6 +178,13 @@ export default class PaymentMatcher extends LightningElement {
         return this.campaignSearchResults.length > 0;
     }
 
+    get householdUrl() {
+        if (this.selectedImport?.matchedAccountId) {
+            return `/lightning/r/Account/${this.selectedImport.matchedAccountId}/view`;
+        }
+        return '#';
+    }
+
     // Helper methods
     getStatusClass(status) {
         const classMap = {
@@ -234,6 +242,9 @@ export default class PaymentMatcher extends LightningElement {
         this.selectedImportId = importId;
         this.isLoading = true;
 
+        // Reset all wizard state when selecting a new import
+        this.resetWizard();
+
         try {
             // Use already-loaded import data when available, fall back to Apex call
             const existingImport = this.imports.find(imp => imp.id === importId);
@@ -257,7 +268,7 @@ export default class PaymentMatcher extends LightningElement {
                 await this.loadExistingPayments();
             } else {
                 this.currentStep = STEPS.CONTACT;
-                this.resetWizard();
+                // resetWizard() already called at start of handleImportSelect
             }
         } catch (error) {
             this.showError('Error loading import', error);
@@ -278,6 +289,7 @@ export default class PaymentMatcher extends LightningElement {
         this.selectedPledgeId = null;
         // Reset create pledge state
         this.showCreatePledge = false;
+        this.campaignSearchTerm = '';
         this.campaignSearchResults = [];
         this.selectedCampaignId = null;
         this.selectedCampaignName = null;
@@ -408,6 +420,16 @@ export default class PaymentMatcher extends LightningElement {
     }
 
     async handleNotDuplicate() {
+        // Reset Step 3 state before entering
+        this.unpaidPledges = [];
+        this.selectedPledgeId = null;
+        this.showCreatePledge = false;
+        this.campaignSearchTerm = '';
+        this.campaignSearchResults = [];
+        this.selectedCampaignId = null;
+        this.selectedCampaignName = null;
+        this.newPledgeDate = null;
+
         this.currentStep = STEPS.PLEDGE;
         await this.loadUnpaidPledges();
     }
@@ -484,8 +506,9 @@ export default class PaymentMatcher extends LightningElement {
     handleToggleCreatePledge() {
         this.showCreatePledge = !this.showCreatePledge;
         if (this.showCreatePledge) {
-            // Initialize date to payment date
+            // Initialize date to payment date and reset search
             this.newPledgeDate = this.selectedImport.paymentDate;
+            this.campaignSearchTerm = '';
             this.campaignSearchResults = [];
             this.selectedCampaignId = null;
             this.selectedCampaignName = null;
@@ -494,6 +517,7 @@ export default class PaymentMatcher extends LightningElement {
 
     async handleCampaignSearch(event) {
         const searchTerm = event.target.value;
+        this.campaignSearchTerm = searchTerm;
 
         if (searchTerm.length < 2) {
             this.campaignSearchResults = [];

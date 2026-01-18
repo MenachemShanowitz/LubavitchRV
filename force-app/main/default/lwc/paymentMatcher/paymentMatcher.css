@@ -108,6 +108,17 @@
     color: white;
 }
 
+/* Household Link */
+.household-link {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.household-link:hover {
+    color: #f0f0f0;
+}
+
 /* Confidence Colors */
 .slds-text-color_success {
     color: #04844b;
