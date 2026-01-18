@@ -114,6 +114,9 @@ await page.screenshot(path="/tmp/verification.png")
 | Playwright: "Sync API inside asyncio loop" | Use async API: `from playwright.async_api import async_playwright` |
 | Can't find elements in Setup pages | Setup renders in iframe - use `iframe.content_frame()` |
 | FlexiPage deploy fails: "no identifier" | Add `<identifier>` to `<componentInstance>` elements |
+| LWC search input not firing on keystroke | Use `onkeyup` instead of `onchange`. `onchange` only fires on blur. |
+| SOQL: "Unexpected token 'Account.Field'" in WHERE | Can't compare `Id = Account.Field__c` directly. Use subquery: `WHERE Id IN (SELECT Field__c FROM Account)` |
+| Test fails after adding relationship filter | Ensure test setup populates the relationship (e.g., `Account.OneCRM__Primary_Contact__c = contact.Id`) |
 
 ## Useful Commands
 
