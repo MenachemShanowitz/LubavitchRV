@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Contacts" icon-name="standard:contact">
+        <template lwc:if={error}>
+            <p class="slds-p-around_medium slds-text-color_error">
+                Error loading contacts: {error.body.message}
+            </p>
+        </template>
+        <template lwc:if={hasContacts}>
+            <lightning-datatable
+                key-field="Id"
+                data={contacts}
+                columns={columns}
+                hide-checkbox-column>
+            </lightning-datatable>
+        </template>
+        <template lwc:if={!hasContacts}>
+            <template lwc:if={!error}>
+                <p class="slds-p-around_medium">No contacts found.</p>
+            </template>
+        </template>
+    </lightning-card>
+</template>
