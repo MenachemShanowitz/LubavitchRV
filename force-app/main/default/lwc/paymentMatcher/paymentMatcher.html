@@ -317,13 +317,19 @@
                                                             <template if:true={pledge.campaignType}>
                                                                 <span class="slds-badge slds-m-left_x-small">{pledge.campaignType}</span>
                                                             </template>
+                                                            <template if:true={pledge.campaignSubType}>
+                                                                <span class="slds-badge slds-badge_lightest slds-m-left_x-small">{pledge.campaignSubType}</span>
+                                                            </template>
+                                                            <template if:true={pledge.campaignDetail}>
+                                                                <span class="slds-badge slds-badge_lightest slds-m-left_x-small">{pledge.campaignDetail}</span>
+                                                            </template>
                                                         </p>
                                                         <p class="slds-text-body_small slds-text-color_weak">
                                                             {pledge.formattedDate} &bull; {pledge.daysDifference} days apart
                                                         </p>
-                                                        <template if:true={pledge.notes}>
+                                                        <template if:true={pledge.memo}>
                                                             <p class="slds-text-body_small slds-text-color_weak slds-m-top_xx-small">
-                                                                <em>{pledge.notes}</em>
+                                                                <strong>Memo:</strong> {pledge.memo}
                                                             </p>
                                                         </template>
                                                     </div>

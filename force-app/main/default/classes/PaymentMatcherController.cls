@@ -152,9 +152,12 @@ public with sharing class PaymentMatcherController {
         @AuraEnabled public Decimal amountPaid;
         @AuraEnabled public Date pledgeDate;
         @AuraEnabled public String campaignType;
+        @AuraEnabled public String campaignSubType;
+        @AuraEnabled public String campaignDetail;
         @AuraEnabled public String campaignName;
         @AuraEnabled public Integer daysDifference;
         @AuraEnabled public String notes;
+        @AuraEnabled public String memo;
         @AuraEnabled public List<PledgeLineItem> lineItems;
 
         public UnpaidPledge(OneCRM__Income__c inc, Date compareDate) {
@@ -168,7 +171,7 @@ public with sharing class PaymentMatcherController {
                 ? Math.abs(compareDate.daysBetween(inc.OneCRM__Date__c))
                 : 9999;
 
-            // Get campaign info and notes from line items
+            // Get campaign info, notes, and memo from line items
             this.lineItems = new List<PledgeLineItem>();
             if (inc.OneCRM__Income_Line_Items__r != null) {
                 for (OneCRM__Income_Line_Item__c li : inc.OneCRM__Income_Line_Items__r) {
@@ -178,11 +181,17 @@ public with sharing class PaymentMatcherController {
                     // Get campaign info from first line item
                     if (this.campaignType == null && li.OneCRM__Related_Campaign__c != null) {
                         this.campaignType = li.OneCRM__Related_Campaign__r?.Type;
+                        this.campaignSubType = li.OneCRM__Related_Campaign__r?.SubType__c;
+                        this.campaignDetail = li.OneCRM__Related_Campaign__r?.Detail__c;
                         this.campaignName = li.OneCRM__Related_Campaign__r?.Name;
                     }
                     // Concatenate notes
                     if (String.isNotBlank(li.OneCRM__Notes__c)) {
                         this.notes = String.isBlank(this.notes) ? li.OneCRM__Notes__c : this.notes + '; ' + li.OneCRM__Notes__c;
+                    }
+                    // Concatenate memo
+                    if (String.isNotBlank(li.OneCRM__Memo__c)) {
+                        this.memo = String.isBlank(this.memo) ? li.OneCRM__Memo__c : this.memo + '; ' + li.OneCRM__Memo__c;
                     }
                 }
             }
@@ -415,8 +424,9 @@ public with sharing class PaymentMatcherController {
             SELECT Id, Name, OneCRM__Amount__c, OneCRM__Amount_Outstanding__c, OneCRM__Paid__c,
                 OneCRM__Date__c, OneCRM__Donor__c,
                 (SELECT Id, OneCRM__Amount__c, OneCRM__Amount_Outstanding__c, OneCRM__Notes__c,
-                    OneCRM__Related_Campaign__c, OneCRM__Related_Campaign__r.Name,
-                    OneCRM__Related_Campaign__r.Type
+                    OneCRM__Memo__c, OneCRM__Related_Campaign__c, OneCRM__Related_Campaign__r.Name,
+                    OneCRM__Related_Campaign__r.Type, OneCRM__Related_Campaign__r.SubType__c,
+                    OneCRM__Related_Campaign__r.Detail__c
                 FROM OneCRM__Income_Line_Items__r
                 WHERE OneCRM__Amount_Outstanding__c > 0
                 ORDER BY OneCRM__Amount_Outstanding__c ASC)
